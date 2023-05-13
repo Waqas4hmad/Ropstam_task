@@ -13,6 +13,11 @@ const Styles = StyleSheet.create({
         alignItems:'center',
 
         paddingTop:25
+    },
+    error :{
+        fontSize:18,
+        paddingTop:10,
+        color:'red'
     }
 }) 
 export default Styles;
