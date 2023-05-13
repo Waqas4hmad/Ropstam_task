@@ -1,5 +1,4 @@
 
-export const SIGNIN = "SIGNIN";
 export const SIGNOUT = "SIGNOUT";
 
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";

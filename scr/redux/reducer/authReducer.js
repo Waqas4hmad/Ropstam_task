@@ -1,33 +1,26 @@
-import { LOGIN_FAIL, SIGNIN, SIGNOUT } from "../action/type";
+import { LOGIN_ERROR, LOGIN_SUCCESS, SIGNOUT } from "../action/type";
 
 const initialState = {
-    user: null,
+    user: [],
     error: null
 }
 
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SIGNIN:
+        case LOGIN_SUCCESS:
             return {
                 ...state,
                 user: action.payload,
                 error: null,
             };
-        case SIGNOUT:
-            return {
-                ...state,
-                user: null,
-                error: null,
-
-            };
-        case LOGIN_FAIL:
+        case LOGIN_ERROR:
             return {
                 ...state,
                 user: null,
                 error: action.payload
             }
         default:
-            return state
+            return state;
     }
 }
 
