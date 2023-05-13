@@ -1,11 +1,11 @@
 import React from 'react';
-import { View } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native'
+import AppNavigator from './scr/navigation/AppNavigator';
 const App = () => {
   return (
-    <View>
-
-    </View>
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 export default App;
