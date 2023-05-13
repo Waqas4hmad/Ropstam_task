@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "fullname": "waqas",
+            "email": "waqas@gmail.com",
+            "phone":"03435959764",
+            "password":"waqas"
+        }
+    ]
+}
