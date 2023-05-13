@@ -9,9 +9,9 @@ const SignIn = () => {
     const [email, SetEmail] = useState('');
     const [password, setPasssword] = useState('');
 
-const handleSignIn = () => {
-    console.log('Signin ddata', email, password)
-}
+    const handleSignIn = () => {
+        console.warn('Signin data', email, password)
+    }
     return (
         <View style={styles.container}>
             <Title title="SignIn Screen" />
@@ -24,12 +24,12 @@ const handleSignIn = () => {
                     placeholder="Password"
                     onChange={setPasssword}
                 />
-
-            </View>
-            <CustomButton
-            title={"Sign In"}
-            onPress={handleSignIn}
+                  <CustomButton
+                title={"Sign In"}
+                onPress={handleSignIn}
             />
+            </View>
+          
         </View>
     )
 }
