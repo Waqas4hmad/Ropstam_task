@@ -10,7 +10,7 @@ import CarAdd from '../screens/CarAdd';
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
     return (
-        <Stack.Navigator initialRouteName='SignUp'>
+        <Stack.Navigator initialRouteName='SignIn'>
             <Stack.Screen
                 name="SignIn"
                 component={SignIn}

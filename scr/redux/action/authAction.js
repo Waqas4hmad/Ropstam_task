@@ -21,7 +21,7 @@ export const login = (email, password) => {
             if (user) {
                 dispatch({
                     type: LOGIN_SUCCESS,
-                    payload: user,
+                    payload: response,
                 });
                 return true;
             }
