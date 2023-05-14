@@ -51,7 +51,7 @@ export const register = (formData) =>
                 headers: headers
             })
             if (response) {
-                dispatch({ type: REGISTER_SUCCESS, payload: data });
+                dispatch({ type: REGISTER_SUCCESS, payload: response });
                 return true;
             }
             else {
