@@ -112,7 +112,7 @@ const Car = ({ car_update, car_delete, route, navigation }) => {
                         <View style={{ alignItems: 'center', paddingBottom: 30 }}>
                             <View style={styles.paddingTop}>
                                 <CustomButton
-                                    title={"Add Car"}
+                                    title={"Update Car"}
                                     onPress={handleSubmit}
                                     disabled={isValid}
                                 />
