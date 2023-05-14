@@ -54,6 +54,14 @@
       "make": "2014",
       "regNo": "raw12",
       "id": 5
+    },
+    {
+      "name": "audi",
+      "color": "black",
+      "model": "2020",
+      "make": "2021",
+      "regNo": "raw-isb",
+      "id": 6
     }
   ]
 }

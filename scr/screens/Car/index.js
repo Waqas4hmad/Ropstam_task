@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
+import { View, Text, ScrollView } from 'react-native';
+import { Formik } from 'formik'
 import { connect } from 'react-redux'
 import CustomInput from '../../components/Input';
 import CustomButton from '../../components/Button';
 import Title from '../../components/Title';
 import { cars, car_add,car_update,car_delete } from '../../redux/action/carAction'
-import DropDownPicker from 'react-native-dropdown-picker';
-import { View, Text, ScrollView } from 'react-native';
 
 import styles from './style';
 
@@ -69,7 +69,7 @@ const Car = ({ cars, car_add,car_update,car_delete, route, navigation }) => {
         }
            }
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={{ alignItems: 'center' }}>
                 <Title title="Car Dealership" />
             </View>
@@ -100,7 +100,7 @@ const Car = ({ cars, car_add,car_update,car_delete, route, navigation }) => {
 
             </View>
 
-        </View>
+        </ScrollView>
     )
 }
 
