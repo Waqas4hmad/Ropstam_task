@@ -1,16 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { View } from 'react-native'
+import { connect } from 'react-redux';
 import CustomInput from '../../components/Input'
 import CustomButton from '../../components/Button'
+import Title from '../../components/Title'
+import { register } from '../../redux/action/authAction'
+
 import styles from './style'
-const SignUp = () => {
+
+const SignUp = ({ register, navigation }) => {
     const [fullname, SetFullName] = useState('');
     const [phone, SetPhone] = useState('');
     const [email, SetEmail] = useState('');
     const [password, setPasssword] = useState('');
 
-    const handleSignUp = () => {
-        console.warn('Signin data', email, password)
+    const handleSignUp = async () => {
+        let formData = {
+            fullname: fullname,
+            email: email,
+            phone: phone,
+            password: password
+        };
+        if (fullname && email && phone && password) {
+            const success = await register({ formData })
+        }
     }
     return (
         <View style={styles.container}>
@@ -40,4 +53,6 @@ const SignUp = () => {
         </View>
     )
 }
-export default SignUp;
+
+
+export default connect(null, { register })(SignUp);

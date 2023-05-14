@@ -1,10 +1,12 @@
 {
-    "users": [
-        {
-            "fullname": "waqas",
-            "email": "waqas@gmail.com",
-            "phone":"03435959764",
-            "password":"waqas"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "fullname": "waqas",
+      "email": "waqas@gmail.com",
+      "phone": "03435959764",
+      "password": "waqas"
+    }
+  
+  ]
 }
