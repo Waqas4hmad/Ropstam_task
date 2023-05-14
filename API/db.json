@@ -118,6 +118,13 @@
       "phone": "03125858754",
       "password": "0125458e",
       "id": 17
+    },
+    {
+      "fullname": "Ropstam",
+      "email": "ropstam@gmail.com",
+      "phone": "03435959764",
+      "password": "ropstam123",
+      "id": 18
     }
   ],
   "cars": [
@@ -138,20 +145,20 @@
       "id": 3
     },
     {
-      "name": "mehran boss",
-      "color": "Black",
-      "model": "2015",
-      "make": "2014",
-      "regNo": "raw12",
-      "id": 5
-    },
-    {
-      "name": "Audi",
+      "name": "Audi E6",
       "color": "black",
       "model": "2020",
       "make": "2021",
       "regNo": "raw-isb",
       "id": 6
+    },
+    {
+      "name": "Corolla",
+      "color": "Grey",
+      "model": "2023",
+      "make": "2022",
+      "regNo": "ISB-123",
+      "id": 7
     }
   ]
 }
