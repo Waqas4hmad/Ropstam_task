@@ -11,6 +11,8 @@ This is a React Native app for managing cars with authentication and CRUD operat
 . Front-end validations for create and update operations.
 . Simulated data coming from JSON files to simulate APIs.
 
+## Demo
+https://www.loom.com/share/74bee70e49634c88a3d034e061cc35f7
 ## Technologies
 . React Native
 . JSON Server
