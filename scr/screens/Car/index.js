@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 import CustomInput from '../../components/Input';
 import CustomButton from '../../components/Button';
 import Title from '../../components/Title';
-import { cars, car_add,car_update } from '../../redux/action/carAction'
+import { cars, car_add,car_update,car_delete } from '../../redux/action/carAction'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { View, Text, ScrollView } from 'react-native';
 
 import styles from './style';
 
 
-const Car = ({ cars, car_add,car_update, route, navigation }) => {
+const Car = ({ cars, car_add,car_update,car_delete, route, navigation }) => {
     const { car } = route.params;
     const [selectedValue, setSelectedValue] = useState();
     const [name, setName] = useState(car?.name);
@@ -24,13 +24,9 @@ const Car = ({ cars, car_add,car_update, route, navigation }) => {
 
     const [options, setOptions] = useState([
     ]);
-    const [items, setItems] = useState([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' }
-    ]);
+
     const getCarsApi = async () => {
         const success = await cars();
-        // setItems(success)
         console.log("ddd", success)
 
         const option = success.map(item => ({ label: item.name, value: item.id }));
@@ -61,9 +57,17 @@ const Car = ({ cars, car_add,car_update, route, navigation }) => {
         }
         }
 
-    const handleDeleteCar = () => {
-        const car = { color, model, make, regNo }
-    }
+    const handleDeleteCar = async () => {
+        try {
+            const success = await car_delete(car.id )
+            console.log(success)
+            if (success) {
+                 navigation.navigate('Dashboard')
+            }
+        } catch (error) {
+            
+        }
+           }
     return (
         <View style={styles.container}>
             <View style={{ alignItems: 'center' }}>
@@ -105,4 +109,4 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps, { cars, car_add, car_update })(Car);
+export default connect(mapStateToProps, { cars, car_add, car_update, car_delete })(Car);
