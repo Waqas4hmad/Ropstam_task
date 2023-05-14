@@ -20,48 +20,24 @@
       "phone": "0321212121",
       "password": "danish",
       "id": 3
+    }
+  ],
+  "cars": [
+    {
+      "id": 1,
+      "name":"toyata",
+      "color": "black",
+      "make": "2022",
+      "model": "2023",
+      "registrationNo": "raw-isb"
     },
     {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 4
-    },
-    {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 5
-    },
-    {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 6
-    },
-    {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 7
-    },
-    {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 8
-    },
-    {
-      "fullname": "danish",
-      "email": "danish@gmail.com",
-      "phone": "0321212121",
-      "password": "danish",
-      "id": 9
+      "id": 2,
+      "name":"honda",
+      "color": "black",
+      "make": "2022",
+      "model": "2023",
+      "registrationNo": "raw-isb"
     }
   ]
 }

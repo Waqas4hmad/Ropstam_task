@@ -7,7 +7,7 @@ import Dashboard from '../screens/Dashboard';
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
     return (
-        <Stack.Navigator initialRouteName='SignIn'>
+        <Stack.Navigator initialRouteName='Dashboard'>
             <Stack.Screen
                 name="SignIn"
                 component={SignIn}
