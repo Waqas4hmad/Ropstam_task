@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { View, Text, ScrollView } from 'react-native';
 import { Formik } from 'formik'
-import * as yup from 'yup'
 import { connect } from 'react-redux'
 import CustomButton from '../../components/Button';
 import Title from '../../components/Title';
@@ -12,12 +11,6 @@ import Formik_Input from '../../components/formikinput';
 import ErrorText from '../../components/ErrorText';
 import { carValidationSchema } from '../../utils/validate';
 const CarAdd = ({ car_add, navigation }) => {
-    const [name, setName] = useState('');
-    const [color, setColor] = useState('');
-    const [model, setModel] = useState('');
-    const [make, setMake] = useState('');
-    const [regNo, setRegNo] = useState('');
-
     return (
         <ScrollView style={styles.container}>
             <View style={{ alignItems: 'center' }}>
@@ -25,7 +18,6 @@ const CarAdd = ({ car_add, navigation }) => {
             </View>
             <Formik
                 validationSchema={carValidationSchema}
-
                 initialValues={{
                     name: '',
                     color: '',
@@ -43,15 +35,12 @@ const CarAdd = ({ car_add, navigation }) => {
                             navigation.navigate('Dashboard')
                         }
                     } catch (error) {
-
+                        console.log(error)
                     }
                 }
-
-
                 }>
                 {({ handleChange, handleBlur, handleSubmit, values, errors, isValid }) => (
                     <>
-
                         <Text style={styles.title}>Name:</Text>
                         <Formik_Input
                             name="name"
@@ -118,9 +107,7 @@ const CarAdd = ({ car_add, navigation }) => {
                         </View>
                     </>
                 )}
-
             </Formik>
-
         </ScrollView>
     )
 }

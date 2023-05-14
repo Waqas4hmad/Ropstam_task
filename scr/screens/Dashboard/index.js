@@ -30,7 +30,7 @@ const Dashboard = ({ cars, navigation }) => {
     useEffect(() => {
         getCarsApi();
 
-    }, [])
+    }, [navigation])
 
     const handleViewCar = async () => {
         const car = carsData.find(item => item.id === value);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { View, Text, ScrollView } from 'react-native';
 import { Formik } from 'formik'
 import { connect } from 'react-redux'
@@ -10,27 +10,8 @@ import { cars, car_add, car_update, car_delete } from '../../redux/action/carAct
 import { carValidationSchema } from '../../utils/validate';
 import styles from './style';
 
-const Car = ({ cars, car_add, car_update, car_delete, route, navigation }) => {
+const Car = ({ car_update, car_delete, route, navigation }) => {
     const { car } = route.params;
-
-
-    const handleUpdateCar = async () => {
-        let carData = {
-            name: name,
-            color: color,
-            model: model,
-            make: make,
-            regNo: regNo
-        };
-
-        if (color && model && make && regNo) {
-            const success = await car_update(carData, car.id)
-            console.log(success)
-            // if (success) {
-            //      navigation.navigate('Dashboard')
-            // }
-        }
-    }
 
     const handleDeleteCar = async () => {
         try {
@@ -145,11 +126,8 @@ const Car = ({ cars, car_add, car_update, car_delete, route, navigation }) => {
                         </View>
                     </>
                 )}
-
             </Formik>
-
         </ScrollView>
-     
     )
 }
 
