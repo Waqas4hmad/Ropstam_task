@@ -61,7 +61,7 @@ export const car_add = (formData) =>
     export const car_update = (formData,id) =>
     async (dispatch) => {
         try {
-            const response = axios.post(`${API_URL}/cars/${id}`, JSON.stringify(formData), {
+            const response = axios.put(`${API_URL}/cars/${id}`, JSON.stringify(formData), {
                 headers: headers
             })
             if (response) {
