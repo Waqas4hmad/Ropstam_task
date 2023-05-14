@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 import CustomInput from '../../components/Input';
 import CustomButton from '../../components/Button';
 import Title from '../../components/Title';
-import { cars, car_add } from '../../redux/action/carAction'
+import { cars, car_add,car_update } from '../../redux/action/carAction'
 import DropDownPicker from 'react-native-dropdown-picker';
 import { View, Text, ScrollView } from 'react-native';
 
 import styles from './style';
 
 
-const Car = ({ cars, car_add, route }) => {
+const Car = ({ cars, car_add,car_update, route, navigation }) => {
     const { car } = route.params;
     const [selectedValue, setSelectedValue] = useState();
     const [name, setName] = useState(car?.name);
@@ -42,27 +42,24 @@ const Car = ({ cars, car_add, route }) => {
 
     }, [])
 
-    const handleCreateCar = async () => {
+   
+    const handleUpdateCar = async () => {
         let carData = {
             name: name,
             color: color,
             model: model,
             make: make,
-            regNo: regis
+            regNo: regNo
         };
 
         if (color && model && make && regNo) {
-            const success = await car_add(carData)
+            const success = await car_update(carData,car.id )
             console.log(success)
-            if (success) {
-                // navigation.navigate('SignIn')
-            }
+            // if (success) {
+            //      navigation.navigate('Dashboard')
+            // }
         }
-    }
-
-    const handleUpdateCar = () => {
-        const car = { color, model, make, regNo }
-    }
+        }
 
     const handleDeleteCar = () => {
         const car = { color, model, make, regNo }
@@ -73,25 +70,25 @@ const Car = ({ cars, car_add, route }) => {
                 <Title title="Car Dealership" />
             </View>
             <Text style={styles.title}>Name:</Text>
-            <CustomInput value={name} placeholder={"Colors"} onPress={setName} />
+            <CustomInput value={name} placeholder={"Colors"} onChange={setName} />
             <Text style={styles.title}>Colors:</Text>
-            <CustomInput value={color} placeholder={"Colors"} onPress={setColor} />
+            <CustomInput value={color} placeholder={"Colors"} onChange={setColor} />
             <Text style={styles.title}>Model:</Text>
-            <CustomInput value={model} placeholder={"Model"} onPress={setModel} />
+            <CustomInput value={model} placeholder={"Model"} onChange={setModel} />
             <Text style={styles.title}>Make:</Text>
-            <CustomInput value={make} placeholder={"Make"} onPress={setMake} />
+            <CustomInput value={make} placeholder={"Make"} onChange={setMake} />
             <Text style={styles.title}>Registration:</Text>
-            <CustomInput value={regNo} placeholder={"Registration"} onPress={setRegNo} />
+            <CustomInput value={regNo} placeholder={"Registration"} onChange={setRegNo} />
             <View style={{ alignItems: 'center', paddingBottom: 30 }}>
 
                 <CustomButton
                     title={"Update"}
-                    onPress={handleCreateCar}
+                    onPress={handleUpdateCar}
                 />
                 <View style={styles.paddingTop}>
                     <CustomButton
                         title={"Delete"}
-                        onPress={handleCreateCar}
+                        onPress={handleDeleteCar}
                     />
                 </View>
 
@@ -108,4 +105,4 @@ const mapStateToProps = state => ({
 })
 
 
-export default connect(mapStateToProps, { cars, car_add })(Car);
+export default connect(mapStateToProps, { cars, car_add, car_update })(Car);

@@ -46,6 +46,22 @@
       "make": "2020",
       "regNo": "ISB-0",
       "id": 3
+    },
+    {
+      "name": "zdfa",
+      "color": "dfD",
+      "model": "dF",
+      "make": "dfcvzv",
+      "regNo": "asdfca.",
+      "id": 4
+    },
+    {
+      "name": "mehran",
+      "color": "Black",
+      "model": "2015",
+      "make": "2011",
+      "regNo": "raw12",
+      "id": 5
     }
   ]
 }

@@ -57,3 +57,23 @@ export const car_add = (formData) =>
             return false;
         }
     }
+
+    export const car_update = (formData,id) =>
+    async (dispatch) => {
+        try {
+            const response = axios.post(`${API_URL}/cars/${id}`, JSON.stringify(formData), {
+                headers: headers
+            })
+            if (response) {
+                dispatch({ type: CARS_FETCH, payload: response });
+                return true;
+            }
+            else {
+                dispatch({ type: CARS_FETCH_ERROR, payload: "Error " });
+                return false;
+            }
+        } catch (error) {
+            dispatch({ type: CARS_FETCH_ERROR, payload: "Error" });
+            return false;
+        }
+    }

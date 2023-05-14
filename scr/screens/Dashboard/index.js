@@ -8,6 +8,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import { View, Text, ScrollView } from 'react-native';
 
 import styles from './style';
+import OrText from '../../components/OrText';
 
 
 const Dashboard = ({ cars, navigation }) => {
@@ -37,6 +38,10 @@ const Dashboard = ({ cars, navigation }) => {
 
     }
 
+    const handleAddCar = async () => {
+        navigation.navigate('CarAdd')
+
+    }
 
     return (
         <View style={styles.container}>
@@ -58,14 +63,15 @@ const Dashboard = ({ cars, navigation }) => {
             </View>
 
             <View style={{ paddingBottom: 30, alignItems: 'center' }}>
-                <View style={{ flexDirection: 'row' }}>
                     <CustomButton
                         title={"View Car"}
                         onPress={handleViewCar}
                     />
-
-                </View>
-
+                <OrText/>
+                <CustomButton
+                        title={"Add New Car"}
+                        onPress={handleAddCar}
+                    />
 
 
             </View>
