@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { connect } from 'react-redux'
-import CustomInput from '../../components/Input';
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { useIsFocused, useNavigation } from '@react-navigation/native';
 import CustomButton from '../../components/Button';
 import Title from '../../components/Title';
-import { cars, car_add } from '../../redux/action/carAction'
+import { cars, car_add } from '../../redux/action/carAction';
 import DropDownPicker from 'react-native-dropdown-picker';
-import { View, Text, ScrollView } from 'react-native';
+import { View } from 'react-native';
 
 import styles from './style';
 import OrText from '../../components/OrText';
 
 
-const Dashboard = ({ cars, navigation }) => {
+const Dashboard = ({ cars }) => {
+    const isFocused = useIsFocused();
+    const navigation = useNavigation();
+
     const [selectedValue, setSelectedValue] = useState();
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
@@ -28,9 +31,12 @@ const Dashboard = ({ cars, navigation }) => {
     }
 
     useEffect(() => {
-        getCarsApi();
+        if(isFocused)
+        {
+            getCarsApi();
+        }
 
-    }, [])
+    }, [isFocused])
 
     const handleViewCar = async () => {
         const car = carsData.find(item => item.id === value);
@@ -63,15 +69,15 @@ const Dashboard = ({ cars, navigation }) => {
             </View>
 
             <View style={{ paddingBottom: 30, alignItems: 'center' }}>
-                    <CustomButton
-                        title={"View Car"}
-                        onPress={handleViewCar}
-                    />
-                <OrText/>
                 <CustomButton
-                        title={"Add New Car"}
-                        onPress={handleAddCar}
-                    />
+                    title={"View Car"}
+                    onPress={handleViewCar}
+                />
+                <OrText />
+                <CustomButton
+                    title={"Add New Car"}
+                    onPress={handleAddCar}
+                />
 
 
             </View>

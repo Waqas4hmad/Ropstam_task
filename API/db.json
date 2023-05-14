@@ -32,20 +32,12 @@
       "regNo": "raw-isb"
     },
     {
-      "name": "Honda",
+      "name": "Honda Ciivic ",
       "color": "White",
-      "model": "2020",
+      "model": "2023",
       "make": "2020",
       "regNo": "ISB-0",
       "id": 3
-    },
-    {
-      "name": "zdfa",
-      "color": "dfD",
-      "model": "dF",
-      "make": "dfcvzv",
-      "regNo": "asdfca.",
-      "id": 4
     },
     {
       "name": "mehran boss",
@@ -56,7 +48,7 @@
       "id": 5
     },
     {
-      "name": "audi",
+      "name": "Audi",
       "color": "black",
       "model": "2020",
       "make": "2021",
