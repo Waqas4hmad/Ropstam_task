@@ -1,7 +1,7 @@
-import { LOGIN_ERROR, LOGIN_SUCCESS, SIGNOUT } from "../action/type";
+import { LOGIN_ERROR, LOGIN_SUCCESS, REGISTER_SUCCESS,REGISTER_FAIL } from "../action/type";
 
 const initialState = {
-    user: [],
+    user: null,
     error: null
 }
 
@@ -14,6 +14,18 @@ const authReducer = (state = initialState, action) => {
                 error: null,
             };
         case LOGIN_ERROR:
+            return {
+                ...state,
+                user: null,
+                error: action.payload
+            }
+        case REGISTER_SUCCESS:
+            return {
+                ...state,
+                user: action.payload,
+                error: null
+            }
+        case REGISTER_FAIL:
             return {
                 ...state,
                 user: null,

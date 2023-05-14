@@ -1,9 +1,11 @@
 
-import { LOGIN_SUCCESS, LOGIN_ERROR } from './type'
+import { LOGIN_SUCCESS, LOGIN_ERROR, REGISTER_SUCCESS, REGISTER_FAIL } from './type'
 import { API_URL } from '../../config/constants';
 import axios from 'axios';
 import { INVALID_LOGIN } from '../../constants';
-
+const headers = {
+    'Content-Type': 'application/json',
+}
 export const login = (email, password) => {
 
     return async (dispatch) => {
@@ -41,3 +43,23 @@ export const login = (email, password) => {
 
     }
 }
+
+export const register = (formData) =>
+    async (dispatch) => {
+        try {
+            const response = axios.post(`${API_URL}/users`, JSON.stringify(formData), {
+                headers: headers
+            })
+            if (response) {
+                dispatch({ type: REGISTER_SUCCESS, payload: data });
+                return true;
+            }
+            else {
+                dispatch({ type: REGISTER_FAIL, payload: response?.error });
+                return false;
+            }
+        } catch (error) {
+            dispatch({ type: REGISTER_FAIL, payload: response?.error });
+            return false;
+        }
+    }

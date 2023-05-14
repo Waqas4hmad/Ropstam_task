@@ -1,10 +1,67 @@
 {
-    "users": [
-        {
-            "fullname": "waqas",
-            "email": "waqas@gmail.com",
-            "phone":"03435959764",
-            "password":"waqas"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "fullname": "waqas",
+      "email": "waqas@gmail.com",
+      "phone": "03435959764",
+      "password": "waqas"
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 2
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 3
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 4
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 5
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 6
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 7
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 8
+    },
+    {
+      "fullname": "danish",
+      "email": "danish@gmail.com",
+      "phone": "0321212121",
+      "password": "danish",
+      "id": 9
+    }
+  ]
 }
