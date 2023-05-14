@@ -16,7 +16,7 @@ const CustomButton = ({ title, onPress }) => {
 
 const styles = StyleSheet.create({
     button: {
-        width: '80%',
+        width:320,
         height: 40,
         alignItems:'center',
         justifyContent:'center',

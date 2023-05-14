@@ -8,18 +8,19 @@ import CustomButton from '../../components/Button'
 import { login } from '../../redux/action/authAction'
 import styles from './style'
 import { INVALID_LOGIN } from '../../constants';
+import OrText from '../../components/OrText';
 
-const SignIn = ({ login, error,navigation }) => {
+const SignIn = ({ login, error, navigation }) => {
     const [email, SetEmail] = useState('');
     const [password, setPasssword] = useState('');
-    
+
     const handleSignIn = async () => {
-       const success= await login(email, password);
+        const success = await login(email, password);
         success ? navigation.navigate('Dashboard') : console.warn(INVALID_LOGIN)
     }
     const handleSignUp = async () => {
-         navigation.navigate('SignUp')
-     }
+        navigation.navigate('SignUp')
+    }
     return (
         <View style={styles.container}>
             <Title title="SignIn Screen" />
@@ -38,8 +39,7 @@ const SignIn = ({ login, error,navigation }) => {
                 />
                 {error && <Text style={styles.error}>{error} </Text>}
 
-                <Text style={styles.or}>OR</Text>
-
+                <OrText />
                 <CustomButton
                     title={"Sign Up"}
                     onPress={handleSignUp}
