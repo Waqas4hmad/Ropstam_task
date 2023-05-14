@@ -5,9 +5,7 @@ import CustomInput from '../../components/Input'
 import CustomButton from '../../components/Button'
 import Title from '../../components/Title'
 import { register } from '../../redux/action/authAction'
-
 import styles from './style'
-
 const SignUp = ({ register, navigation }) => {
     const [fullname, SetFullName] = useState('');
     const [phone, SetPhone] = useState('');
@@ -22,7 +20,12 @@ const SignUp = ({ register, navigation }) => {
             password: password
         };
         if (fullname && email && phone && password) {
-            const success = await register({ formData })
+            const success = await register(formData )
+            console.log(success)
+            if( success)
+            {
+                navigation.navigate('SignIn')
+            }
         }
     }
     return (
@@ -53,6 +56,5 @@ const SignUp = ({ register, navigation }) => {
         </View>
     )
 }
-
 
 export default connect(null, { register })(SignUp);

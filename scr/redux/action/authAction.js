@@ -44,15 +44,13 @@ export const login = (email, password) => {
     }
 }
 
-export const register = ({formData}) =>
+export const register = (formData) =>
     async (dispatch) => {
         try {
-            console.log("test",formData)
             const response = axios.post(`${API_URL}/users`, JSON.stringify(formData), {
                 headers: headers
             })
-            const data = response?.data;
-            if (data?.id) {
+            if (response) {
                 dispatch({ type: REGISTER_SUCCESS, payload: data });
                 return true;
             }
