@@ -5,7 +5,7 @@
       "fullname": "waqas",
       "email": "waqas@gmail.com",
       "phone": "03435959764",
-      "password": "waqas"
+      "password": "waqas1234"
     },
     {
       "fullname": "danish",
@@ -20,6 +20,111 @@
       "phone": "0321212121",
       "password": "danish",
       "id": 3
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 4
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 5
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 6
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 7
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 8
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 9
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 10
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 11
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 12
+    },
+    {
+      "fullname": "Mirha",
+      "email": "mirha@gmail.com",
+      "phone": "03125858754",
+      "password": "mirha123",
+      "id": 13
+    },
+    {
+      "fullname": "danish",
+      "email": "dani@gmail.com",
+      "phone": "03125858754",
+      "password": "0125458e",
+      "id": 14
+    },
+    {
+      "fullname": "danish",
+      "email": "dani@gmail.com",
+      "phone": "03125858754",
+      "password": "0125458e",
+      "id": 15
+    },
+    {
+      "fullname": "danish",
+      "email": "dani@gmail.com",
+      "phone": "03125858754",
+      "password": "0125458e",
+      "id": 16
+    },
+    {
+      "fullname": "danish",
+      "email": "dani@gmail.com",
+      "phone": "03125858754",
+      "password": "0125458e",
+      "id": 17
+    },
+    {
+      "fullname": "Ropstam",
+      "email": "ropstam@gmail.com",
+      "phone": "03435959764",
+      "password": "ropstam123",
+      "id": 18
     }
   ],
   "cars": [
@@ -40,20 +145,20 @@
       "id": 3
     },
     {
-      "name": "mehran boss",
-      "color": "Black",
-      "model": "2015",
-      "make": "2014",
-      "regNo": "raw12",
-      "id": 5
-    },
-    {
-      "name": "Audi",
+      "name": "Audi E6",
       "color": "black",
       "model": "2020",
       "make": "2021",
       "regNo": "raw-isb",
       "id": 6
+    },
+    {
+      "name": "Corolla",
+      "color": "Grey",
+      "model": "2023",
+      "make": "2022",
+      "regNo": "ISB-123",
+      "id": 7
     }
   ]
 }

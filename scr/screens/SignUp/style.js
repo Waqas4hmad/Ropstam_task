@@ -13,6 +13,13 @@ const Styles = StyleSheet.create({
         alignItems:'center',
 
         paddingTop:25
+    },
+    title: {
+        textAlign:'left',
+        width:'90%',
+        paddingTop:10,
+        paddingBottom:5,
+        color:'blue'
     }
 }) 
 export default Styles;

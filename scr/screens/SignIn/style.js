@@ -17,6 +17,13 @@ const Styles = StyleSheet.create({
         paddingTop:10,
         color:'red'
     },
+    title: {
+        textAlign:'left',
+        width:'90%',
+        paddingTop:10,
+        paddingBottom:5,
+        color:'blue'
+    },
     or: {
         fontSize:18,
         fontWeight:'bold',
