@@ -38,22 +38,22 @@ export const cars = () => {
     }
 }
 
-// export const register = (formData) =>
-//     async (dispatch) => {
-//         try {
-//             const response = axios.post(`${API_URL}/users`, JSON.stringify(formData), {
-//                 headers: headers
-//             })
-//             if (response) {
-//                 dispatch({ type: CARS_FETCH, payload: data });
-//                 return true;
-//             }
-//             else {
-//                 dispatch({ type: CARS_FETCH_ERROR, payload: response?.error });
-//                 return false;
-//             }
-//         } catch (error) {
-//             dispatch({ type: CARS_FETCH_ERROR, payload: response?.error });
-//             return false;
-//         }
-//     }
+export const car_add = (formData) =>
+    async (dispatch) => {
+        try {
+            const response = axios.post(`${API_URL}/cars`, JSON.stringify(formData), {
+                headers: headers
+            })
+            if (response) {
+                dispatch({ type: CARS_FETCH, payload: response });
+                return true;
+            }
+            else {
+                dispatch({ type: CARS_FETCH_ERROR, payload: "Error " });
+                return false;
+            }
+        } catch (error) {
+            dispatch({ type: CARS_FETCH_ERROR, payload: "Error" });
+            return false;
+        }
+    }

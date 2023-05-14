@@ -25,19 +25,27 @@
   "cars": [
     {
       "id": 1,
-      "name":"toyata",
+      "name": "toyata",
       "color": "black",
       "make": "2022",
       "model": "2023",
-      "registrationNo": "raw-isb"
+      "regNo": "raw-isb"
     },
     {
       "id": 2,
-      "name":"honda",
+      "name": "honda",
       "color": "black",
       "make": "2022",
       "model": "2023",
-      "registrationNo": "raw-isb"
+      "regNo": "raw-isb"
+    },
+    {
+      "name": "Honda",
+      "color": "White",
+      "model": "2020",
+      "make": "2020",
+      "regNo": "ISB-0",
+      "id": 3
     }
   ]
 }
