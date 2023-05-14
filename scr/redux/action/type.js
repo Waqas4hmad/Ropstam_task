@@ -11,5 +11,11 @@ export const LOGOUT = "LOGOUT";
 export const CARS_FETCH = "CARS_FETCH";
 export const CARS_FETCH_ERROR = "CARS_FETCH_ERROR";
 
+export const CARS_UPDATE = "CARS_UPDATE";
+export const CARS_UPDATE_ERROR = "CARS_UPDATE_ERROR";
+
+export const CARS_DELETE = "CARS_DELETE";
+export const CARS_DELETE_ERROR = "CARS_DELETE_ERROR";
+
 
 

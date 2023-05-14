@@ -32,14 +32,6 @@
       "regNo": "raw-isb"
     },
     {
-      "id": 2,
-      "name": "honda",
-      "color": "black",
-      "make": "2022",
-      "model": "2023",
-      "regNo": "raw-isb"
-    },
-    {
       "name": "Honda",
       "color": "White",
       "model": "2020",

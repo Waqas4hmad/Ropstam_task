@@ -9,8 +9,10 @@ const Title = ({ title }) => {
 
 const styles = StyleSheet.create({
     title: {
-        fontSize: 32,
-        fontWeight: 'bold'
+        fontSize: 24,
+        fontWeight: 'bold',
+        color:'blue',
+        paddingTop:15
     }
 })
 export default Title;
